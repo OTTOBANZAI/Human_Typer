@@ -203,15 +203,6 @@ class TypingSimulatorApp(tk.Tk):
         self.start_button.configure(state="disabled" if running else "normal")
         self.stop_button.configure(state="normal" if running else "disabled")
 
-    # def _delete_last_preview_char(self) -> None:
-    #     """Remove the most recently displayed character for typo correction."""
-    #
-    #     self._set_preview_state("normal")
-    #     if self.preview.index("end-1c") != "1.0":
-    #         self.preview.delete("end-2c", "end-1c")
-    #     self.preview.see("end")
-    #     self._set_preview_state("disabled")
-
     def _delay_for(self, char: str, previous_char: str) -> int:
         """Calculate the next delay in milliseconds from WPM and context."""
 
